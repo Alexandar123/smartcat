@@ -1,0 +1,10 @@
+xml version=1.0 encoding=UTF-8
+beans xmlns=httpwww.springframework.orgschemabeans
+       xmlnsxsi=httpwww.w3.org2001XMLSchema-instance
+       xsischemaLocation=httpwww.springframework.orgschemabeans httpwww.springframework.orgschemabeansspring-beans.xsd
+
+    bean id=elasticSearchClientService
+          class=org.elasticsearch.kafka.indexer.service.ElasticSearchClientService
+          scope=prototype
+
+beans
