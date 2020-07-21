@@ -89,9 +89,6 @@
 				<artifactId>maven-war-plugin</artifactId>
 			</plugin>
 
-			<!-- <plugin> <groupId>pl.project13.maven</groupId> <artifactId>git-commit-id-plugin</artifactId> 
-				<version>${git-commit-id-plugin.version}</version> </plugin> -->
-
 		</plugins>
 
 	</build>
@@ -110,16 +107,7 @@
 								<goals>
 									<goal>test</goal>
 								</goals>
-								<configuration>
-									<!-- <excludes> -->
-									<!-- <exclude>**/*LiveTest.java</exclude> -->
-									<!-- <exclude>**/*IntegrationTest.java</exclude> -->
-									<!-- <exclude>**/*IntTest.java</exclude> -->
-									<!-- </excludes> -->
-									<!-- <includes> -->
-									<!-- <include>**/AutoconfigurationTest.java</include> -->
-									<!-- </includes> -->
-								</configuration>
+								
 							</execution>
 						</executions>
 						<configuration>
