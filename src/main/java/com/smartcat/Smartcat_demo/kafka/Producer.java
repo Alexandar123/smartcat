@@ -14,9 +14,8 @@ public class Producer {
 
 	@Autowired
 	private static KafkaTemplate<String, String> kafkaTemplate;
-	
-	
-	public Producer(KafkaTemplate<String,String> kafkaTemplate) {
+
+	public Producer(KafkaTemplate<String, String> kafkaTemplate) {
 		Producer.kafkaTemplate = kafkaTemplate;
 	}
 

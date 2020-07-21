@@ -12,12 +12,10 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 import com.smartcat.Smartcat_demo.kafka.Producer;
 
-import lombok.Getter;
-
 @Service
 public class WebSocketConnection extends TextWebSocketHandler {
 
-	@Getter
+	private static final String URL = "wss://ws.kupujemprodajem.com/wsfeed?get=combined";
 	private WebSocketSession clientSession;
 
 	public WebSocketSession getClientSession() {
@@ -27,8 +25,7 @@ public class WebSocketConnection extends TextWebSocketHandler {
 	public WebSocketConnection() throws ExecutionException, InterruptedException {
 		StandardWebSocketClient webSocketClient = new StandardWebSocketClient();
 		try {
-			this.clientSession = webSocketClient.doHandshake(this, new WebSocketHttpHeaders(),
-					URI.create("wss://ws.kupujemprodajem.com/wsfeed?get=combined")).get();
+			this.clientSession = webSocketClient.doHandshake(this, new WebSocketHttpHeaders(), URI.create(URL)).get();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} catch (ExecutionException e) {

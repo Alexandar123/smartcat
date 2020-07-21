@@ -10,7 +10,6 @@ elasticsearch:
     - 9300:9300
 
 indexer:
-  # trying to use the already created image from gradle createDocker  .
   # build: ../build/docker
   image: org.elasticsearch.kafka.indexer/kafka-elasticsearch-consumer:0.0.2.0
   volumes:
@@ -20,16 +19,9 @@ indexer:
     - kafka:kafka
     - elasticsearch:es
 
-#zookeeper:
-#  image: wurstmeister/zookeeper
-#  name: zookeeper
-#  ports:
-#    - "2181:2181"
-
 zookeeper:
-  image: confluent/zookeeper
+  image: wurstmeister/zookeeper
   name: zookeeper
-  hostname: zookeeper
   ports:
     - "2181:2181"
 

@@ -1,6 +1,6 @@
 kafka.consumer.property.prefix=consumer.kafka.property.
 
-consumer.kafka.property.bootstrap.servers=localhost:9092consumer.kafka.property.group.id=kafka-batch-consumer
+consumer.kafka.property.bootstrap.servers=localhost:9092
 
 consumer.kafka.property.group.id=kafka-batch-consumer
 
